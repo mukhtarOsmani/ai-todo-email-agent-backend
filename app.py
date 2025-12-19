@@ -18,8 +18,8 @@ class Task(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     description = db.Column(db.String(500), nullable=False)
     recipient_email = db.Column(db.String(120))
-    due_date = db.Column(db.String(50))  # Store as string for simplicity (e.g., '2025-12-20')
-    status = db.Column(db.String(50), default='pending')  # pending, confirmed, sent
+    due_date = db.Column(db.String(50))
+    status = db.Column(db.String(50), default='pending')
 
 @app.route('/')
 def home():
