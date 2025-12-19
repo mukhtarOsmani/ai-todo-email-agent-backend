@@ -19,6 +19,11 @@
         <label>Due Date: <input type="text" name="due_date" placeholder="YYYY-MM-DD"></label><br>
         <button type="submit">Add Task Manually (for testing)</button>
     </form>
+        <h2>Add Reminder (NLP Parsing)</h2>
+    <form method="POST" action="{{ url_for('add_reminder') }}">
+        <label>Reminder: <input type="text" name="reminder" required placeholder="e.g., Remind me to email john@example.com about project by Friday"></label><br>
+        <button type="submit">Parse and Add Task</button>
+    </form>
     <h2>Task List</h2>
     <ul>
         {% for task in tasks %}
